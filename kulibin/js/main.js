@@ -84,8 +84,8 @@ const Utils = {
             if (!isFirefox || !customScroll.length) return;
 
             document.documentElement.style.scrollbarWidth = "thin";
-            document.documentElement.style.scrollbarColor = "#591A0B #EAE6E1";
-            customScroll.forEach(item => { item.style.scrollbarWidth = "thin"; item.style.scrollbarColor = "#591A0B transparent" });
+            document.documentElement.style.scrollbarColor = "#1a1a1a transparent";
+            customScroll.forEach(item => { item.style.scrollbarWidth = "thin"; item.style.scrollbarColor = "#1a1a1a transparent" });
 
         },
         initScrollHandlers() {
