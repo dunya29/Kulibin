@@ -3250,13 +3250,16 @@ p {
 }
 
 .item-news__content .h4 {
-  color: var(--primary);
   max-width: 24rem;
   margin-bottom: 0.8rem;
 }
 
 .item-news__content .h4:not(section):not(.sec-top):last-child {
   margin-bottom: 0;
+}
+
+.item-news__content .h4 a {
+  color: var(--primary);
 }
 
 .news__items {
