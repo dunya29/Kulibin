@@ -25,7 +25,7 @@
 <header class="header fixed-block ">
     <div class="header__inner">
         <div class="container">
-            <div class="header__item">Нижний Новгород</div>
+            <div class="mob-hidden header__item header__address">Нижний Новгород</div>
             <div class="header__item header__phone"><a href="tel:+78312020888"><svg><use xlink:href="img/svg/sprite.svg#phone"></use></svg>+7 (831) 20-20-888</a></div>
             <div class="header__logo">
                 <a href="#"><img src="img/svg/header-logo.svg" alt></a>
@@ -40,16 +40,18 @@
                 </div>
 
             </div>
-            <a href="#" class="btn main-btn header__booking"><span>забронировать номер</span></a>
+            <a href="#" class="btn main-btn desktop-only"><span>забронировать номер</span></a>
             <div role="button" class="icon-menu" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="icon-menu__items">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
     <div class="header__mob">
-        <div class="custom-scroll container">
+        <div class="container">
             <div class="header__mob-inner">
                 <nav class="header__menu">
                     <ul>
@@ -63,11 +65,11 @@
                         <li><a href="#" class="link">контакты</a></li>
                     </ul>
                 </nav>
-                <div class=" desktop-hidden header__address">
+                <p class="desktop-hidden mb-32 header__address">
                     г. Нижний Новгород,<br>
                     ул. Максима Горького, д. 121, 603006
-                </div>
-                <div class=" desktop-hidden header__contacts">
+                </p>
+                <div class="desktop-hidden mb-32 header__contacts">
                     <div class="mb-32 header__contacts-item">
                         <p class="h5">
                             <a href="tel:+78312020888">+7 (831) 20-20-888</a>
@@ -85,9 +87,9 @@
                 <div class="page-top">
                     <div class="container">
                         <!--breadcrumbs-->
-<div class="breadcrumbs">
-    <ul>
-        <li><a href="#">Главная</a></li>
+<div class="scrollable breadcrumbs">
+    <ul class="scrollable__items">
+        <li><a href="#" class="link">Главная</a></li>
         
         <li>Спецпредложения</li>
     </ul>
@@ -105,102 +107,132 @@
                         <div class="offers__cards">
                             <!--image-card-->
 
-<div class="mb-60 image-card">
-    <div class="media-cover">
-        <picture><source srcset="img/content/offer-2.webp" type="image/webp"><img src="img/content/offer-2.jpg" alt></picture>
-    </div>
-    <div class="mb-24 image-card__inner">
-        <div class="image-card__content">
-            <h2 class="h3">Семейное<br>предложение</h2>
-            <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
+<div class="mb-60 image-card" data-animation="fadeUp">
+    <a href="#" class="media-cover">
+        <picture>
+    <source srcset="img/content/offer-2.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-2.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-2-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-2-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-2-mob.webp" type="image/webp">
+    <source srcset="img/content/offer-2-mob.jpg">
+    <img src="img/content/offer-2.jpg" alt>
+</picture>
+    </a>
+    <div class="mb-24 image-card__content">
+        <h2 class="h3"><a href="#">Семейное<br>предложение</a></h2>
+        <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
                             вечером</p>
-        </div>
-        
-        <a href="#" class="btn text-btn">
-            <span>подробнее</span>
-        </a>
-        
     </div>
+    
+    <a href="#" class="btn text-btn">
+        <span>подробнее</span>
+    </a>
+    
 </div>
                             <!--image-card-->
 
-<div class="mb-60 image-card">
-    <div class="media-cover">
-        <picture><source srcset="img/content/offer-3.webp" type="image/webp"><img src="img/content/offer-3.jpg" alt></picture>
+<div class="mb-60 image-card" data-animation="fadeUp">
+    <a href="#" class="media-cover">
+        <picture>
+    <source srcset="img/content/offer-3.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-3.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-3-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-3-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-3-mob.webp" type="image/webp">
+    <source srcset="img/content/offer-3-mob.jpg">
+    <img src="img/content/offer-3.jpg" alt>
+</picture>
+    </a>
+    <div class="mb-24 image-card__content">
+        <h2 class="h3"><a href="#">Банкеты и свадьбы</a></h2>
+        <p>Организуем праздник от уютного ужина до банкета. Просторные залы, индивидуальное меню.</p>
     </div>
-    <div class="mb-24 image-card__inner">
-        <div class="image-card__content">
-            <h2 class="h3">Банкеты и свадьбы</h2>
-            <p>Организуем праздник от уютного ужина до банкета. Просторные залы, индивидуальное меню.</p>
-        </div>
-        
-        <div class="image-card__btns">
-            <button class="btn main-btn mode-open-btn" data-modal="feedback-modal">
+    
+    <div class="image-card__btns">
+        <button class="btn main-btn mode-open-btn" data-modal="feedback-modal">
                                 <span>оставить заявку</span>
                             </button>
                             <a href="#" target="_blank" class="btn text-btn">
                                 <span>банкетное меню</span>
                             </a>
-        </div>
-        
     </div>
+    
 </div>
                             <!--image-card-->
 
-<div class="mb-60 image-card">
-    <div class="media-cover">
-        <picture><source srcset="img/content/offer-4.webp" type="image/webp"><img src="img/content/offer-4.jpg" alt></picture>
-    </div>
-    <div class="mb-24 image-card__inner">
-        <div class="image-card__content">
-            <h2 class="h3">Ключ к Нижнему</h2>
-            <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
+<div class="mb-60 image-card" data-animation="fadeUp">
+    <a href="#" class="media-cover">
+        <picture>
+    <source srcset="img/content/offer-4.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-4.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-4-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-4-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-4-mob.webp" type="image/webp">
+    <source srcset="img/content/offer-4-mob.jpg">
+    <img src="img/content/offer-4.jpg" alt>
+</picture>
+    </a>
+    <div class="mb-24 image-card__content">
+        <h2 class="h3"><a href="#">Ключ к Нижнему</a></h2>
+        <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
                             вечером</p>
-        </div>
-        
-        <a href="#" class="btn text-btn">
-            <span>подробнее</span>
-        </a>
-        
     </div>
+    
+    <a href="#" class="btn text-btn">
+        <span>подробнее</span>
+    </a>
+    
 </div>
                             <!--image-card-->
 
-<div class="mb-60 image-card">
-    <div class="media-cover">
-        <picture><source srcset="img/content/offer-5.webp" type="image/webp"><img src="img/content/offer-5.jpg" alt></picture>
-    </div>
-    <div class="mb-24 image-card__inner">
-        <div class="image-card__content">
-            <h2 class="h3">День Рождения<br>мечты в Кулибине</h2>
-            <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
+<div class="mb-60 image-card" data-animation="fadeUp">
+    <a href="#" class="media-cover">
+        <picture>
+    <source srcset="img/content/offer-5.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-5.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-5-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-5-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-5-mob.webp" type="image/webp">
+    <source srcset="img/content/offer-5-mob.jpg">
+    <img src="img/content/offer-5.jpg" alt>
+</picture>
+    </a>
+    <div class="mb-24 image-card__content">
+        <h2 class="h3"><a href="#">День Рождения<br>мечты в Кулибине</a></h2>
+        <p>Время только для вас двоих — уютная атмосфера, красивые детали и возможность остановиться, чтобы побыть рядом, поговорить и просто насладиться
                             вечером</p>
-        </div>
-        
-        <a href="#" class="btn text-btn">
-            <span>подробнее</span>
-        </a>
-        
     </div>
+    
+    <a href="#" class="btn text-btn">
+        <span>подробнее</span>
+    </a>
+    
 </div>
                             <!--image-card-->
 
-<div class="mb-60 image-card">
-    <div class="media-cover">
-        <picture><source srcset="img/content/offer-1.webp" type="image/webp"><img src="img/content/offer-1.jpg" alt></picture>
-    </div>
-    <div class="mb-24 image-card__inner">
-        <div class="image-card__content">
-            <h2 class="h3">Романтическое<br>свидание для двоих</h2>
-            <p>Исследовать
+<div class="mb-60 image-card" data-animation="fadeUp">
+    <a href="#" class="media-cover">
+        <picture>
+    <source srcset="img/content/offer-1.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-1.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/offer-1-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-1-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/offer-1-mob.webp" type="image/webp">
+    <source srcset="img/content/offer-1-mob.jpg">
+    <img src="img/content/offer-1.jpg" alt>
+</picture>
+    </a>
+    <div class="mb-24 image-card__content">
+        <h2 class="h3"><a href="#">Романтическое<br>свидание для двоих</a></h2>
+        <p>Исследовать
                             Нижний Новгород, потерять счёт времени за ужином и уйти в спа за ощущением полного расслабления.</p>
-        </div>
-        
-        <a href="#" class="btn text-btn">
-            <span>подробнее</span>
-        </a>
-        
     </div>
+    
+    <a href="#" class="btn text-btn">
+        <span>подробнее</span>
+    </a>
+    
 </div>
                         </div>
                     </div>
@@ -235,23 +267,23 @@
         </div>
         <nav class="footer__menu">
             <ul>
-                <li><a href="#">Номера</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Отель</a></li>
+                <li><a href="#">номера</a></li>
+                <li><a href="#">услуги</a></li>
+                <li><a href="#">отель</a></li>
             </ul>
             <ul>
-                <li><a href="#">Ресторан</a></li>
-                <li><a href="#">Конференц-залы</a></li>
+                <li><a href="#">ресторан</a></li>
+                <li><a href="#">конференц-залы</a></li>
                 <li><a href="#">СПА</a></li>
             </ul>
             <ul>
-                <li><a href="#">Золотой стандарт</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">золотой стандарт</a></li>
+                <li><a href="#">вакансии</a></li>
+                <li><a href="#">спецпредложения</a></li>
             </ul>
             <ul>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#">новости</a></li>
+                <li><a href="#">контакты</a></li>
             </ul>
         </nav>
         <div class="footer__links">
@@ -361,8 +393,8 @@
         <div class="custom-scroll">
             <div class="media-cover modal__img">
                 <picture>
-                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/mod-result.jpg" media="(min-width: 1023.98px)">
+                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 575.98px)">
+                    <source srcset="img/mod-result.jpg" media="(min-width: 575.98px)">
                     <source srcset="img/mod-result-mob.webp" type="image/webp">
                     <source srcset="img/mod-result-mob.jpg">
                     <img src="img/mod-result.jpg" alt>

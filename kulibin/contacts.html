@@ -25,7 +25,7 @@
 <header class="header fixed-block ">
     <div class="header__inner">
         <div class="container">
-            <div class="header__item">Нижний Новгород</div>
+            <div class="mob-hidden header__item header__address">Нижний Новгород</div>
             <div class="header__item header__phone"><a href="tel:+78312020888"><svg><use xlink:href="img/svg/sprite.svg#phone"></use></svg>+7 (831) 20-20-888</a></div>
             <div class="header__logo">
                 <a href="#"><img src="img/svg/header-logo.svg" alt></a>
@@ -40,16 +40,18 @@
                 </div>
 
             </div>
-            <a href="#" class="btn main-btn header__booking"><span>забронировать номер</span></a>
+            <a href="#" class="btn main-btn desktop-only"><span>забронировать номер</span></a>
             <div role="button" class="icon-menu" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="icon-menu__items">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
     <div class="header__mob">
-        <div class="custom-scroll container">
+        <div class="container">
             <div class="header__mob-inner">
                 <nav class="header__menu">
                     <ul>
@@ -63,11 +65,11 @@
                         <li><a href="#" class="link">контакты</a></li>
                     </ul>
                 </nav>
-                <div class=" desktop-hidden header__address">
+                <p class="desktop-hidden mb-32 header__address">
                     г. Нижний Новгород,<br>
                     ул. Максима Горького, д. 121, 603006
-                </div>
-                <div class=" desktop-hidden header__contacts">
+                </p>
+                <div class="desktop-hidden mb-32 header__contacts">
                     <div class="mb-32 header__contacts-item">
                         <p class="h5">
                             <a href="tel:+78312020888">+7 (831) 20-20-888</a>
@@ -85,14 +87,14 @@
                 <div class="page-top">
                     <div class="container">
                         <!--breadcrumbs-->
-<div class="breadcrumbs">
-    <ul>
-        <li><a href="#">Главная</a></li>
+<div class="scrollable breadcrumbs">
+    <ul class="scrollable__items">
+        <li><a href="#" class="link">Главная</a></li>
         
         <li>Контакты</li>
     </ul>
 </div>
-                        <a href="btn text-btn" class="text-btn"><span>назад на главную</span></a>
+                        <a href="#" class="btn text-btn"><span>назад на главную</span></a>
                     </div>
                 </div>
                 <!--contacts-->
@@ -100,28 +102,29 @@
                     <div class="container">
                         <div class="contacts__cols">
                             <div class="contacts__main">
-                                <div class="mb-32 contacts__top">
-                                    <h1 class="h4">г. Нижний Новгород,<br>ул. Максима Горького,<br>д. 121, 603006</h1>
-                                    <div class="contacts__lbl">Адрес</div>
+                                <div class="contacts__top">
+                                    <h1 class="h3">г. Нижний Новгород,<br>ул. Максима Горького,<br>д. 121, 603006</h1>
+                                    <div class="desktop-only contacts__lbl">Адрес</div>
                                 </div>
                                 <div class="contacts__items">
                                     <div class="mb-32 contacts__item">
                                         <a href="tel:88314351234" class="h5">+7 (831) 435 12 34</a>
                                         <a href="tel:88312020888" class="h5">+7 (831) 20-20-888</a>
-                                        <div class="contacts__lbl">Служба размещения (круглосуточно)</div>
+                                        <div class="contacts__lbl">Служба размещения <span>(круглосуточно)</span></div>
+                                    </div>
+                                    <div class="mb-32 contacts__item">
+                                        <a href="tel:88314351234" class="h5">+7 (831) 435 12 34</a>
+                                        <a href="tel:88312020888" class="h5">+7 (831) 20-20-888</a>
+                                        <a href="mailto:sales@kulibin-hotel.ru" class="h5">sales@kulibin-hotel.ru</a>
+                                        <div class="contacts__lbl">Отдел продаж</div>
                                     </div>
                                     <div class="mb-32 contacts__item">
                                         <a href="mailto:reception@kulibin-hotel.ru" class="h5">reception@kulibin-hotel.ru</a>
                                         <div class="contacts__lbl">Почта для обращений</div>
                                     </div>
-                                    <div class="mb-32 contacts__item">
-                                        <a href="tel:88314351234" class="h5">+7 (831) 435 12 34</a>
-                                        <a href="tel:88312020888" class="h5">+7 (831) 20-20-888</a>
-                                        <div class="contacts__lbl">Отдел продаж</div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="contacts__map">
+                            <div class="map contacts__map">
                                 <iframe
                                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A15f05c62ed05d4a685a952700fc6139a095341a4d063f640bbabade3992f8aa2&amp;source=constructor"
                                     width="100%" height="569" frameborder="0"></iframe>
@@ -159,23 +162,23 @@
         </div>
         <nav class="footer__menu">
             <ul>
-                <li><a href="#">Номера</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Отель</a></li>
+                <li><a href="#">номера</a></li>
+                <li><a href="#">услуги</a></li>
+                <li><a href="#">отель</a></li>
             </ul>
             <ul>
-                <li><a href="#">Ресторан</a></li>
-                <li><a href="#">Конференц-залы</a></li>
+                <li><a href="#">ресторан</a></li>
+                <li><a href="#">конференц-залы</a></li>
                 <li><a href="#">СПА</a></li>
             </ul>
             <ul>
-                <li><a href="#">Золотой стандарт</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">золотой стандарт</a></li>
+                <li><a href="#">вакансии</a></li>
+                <li><a href="#">спецпредложения</a></li>
             </ul>
             <ul>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#">новости</a></li>
+                <li><a href="#">контакты</a></li>
             </ul>
         </nav>
         <div class="footer__links">
@@ -285,8 +288,8 @@
         <div class="custom-scroll">
             <div class="media-cover modal__img">
                 <picture>
-                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/mod-result.jpg" media="(min-width: 1023.98px)">
+                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 575.98px)">
+                    <source srcset="img/mod-result.jpg" media="(min-width: 575.98px)">
                     <source srcset="img/mod-result-mob.webp" type="image/webp">
                     <source srcset="img/mod-result-mob.jpg">
                     <img src="img/mod-result.jpg" alt>

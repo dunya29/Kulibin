@@ -25,7 +25,7 @@
 <header class="header fixed-block ">
     <div class="header__inner">
         <div class="container">
-            <div class="header__item">Нижний Новгород</div>
+            <div class="mob-hidden header__item header__address">Нижний Новгород</div>
             <div class="header__item header__phone"><a href="tel:+78312020888"><svg><use xlink:href="img/svg/sprite.svg#phone"></use></svg>+7 (831) 20-20-888</a></div>
             <div class="header__logo">
                 <a href="#"><img src="img/svg/header-logo.svg" alt></a>
@@ -40,16 +40,18 @@
                 </div>
 
             </div>
-            <a href="#" class="btn main-btn header__booking"><span>забронировать номер</span></a>
+            <a href="#" class="btn main-btn desktop-only"><span>забронировать номер</span></a>
             <div role="button" class="icon-menu" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="icon-menu__items">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
     <div class="header__mob">
-        <div class="custom-scroll container">
+        <div class="container">
             <div class="header__mob-inner">
                 <nav class="header__menu">
                     <ul>
@@ -63,11 +65,11 @@
                         <li><a href="#" class="link">контакты</a></li>
                     </ul>
                 </nav>
-                <div class=" desktop-hidden header__address">
+                <p class="desktop-hidden mb-32 header__address">
                     г. Нижний Новгород,<br>
                     ул. Максима Горького, д. 121, 603006
-                </div>
-                <div class=" desktop-hidden header__contacts">
+                </p>
+                <div class="desktop-hidden mb-32 header__contacts">
                     <div class="mb-32 header__contacts-item">
                         <p class="h5">
                             <a href="tel:+78312020888">+7 (831) 20-20-888</a>
@@ -85,16 +87,16 @@
                 <div class="page-top">
                     <div class="container">
                         <!--breadcrumbs-->
-<div class="breadcrumbs">
-    <ul>
-        <li><a href="#">Главная</a></li>
+<div class="scrollable breadcrumbs">
+    <ul class="scrollable__items">
+        <li><a href="#" class="link">Главная</a></li>
         
-        <li><a href="#">конференции</a></li>
+        <li><a href="#" class="link">конференции</a></li>
         
         <li>Зал Шаляпин</li>
     </ul>
 </div>
-                        <a href="btn text-btn" class="text-btn"><span>назад к залам</span></a>
+                        <a href="#" class="btn text-btn"><span>назад к залам</span></a>
                     </div>
                 </div>
                 <!--room-->
@@ -106,12 +108,10 @@
                                 <p>Мини-описание/Классификатор</p>
                             </div>
                         </div>
-                    </div>
-                     <!--card-->
-<div class="mb-60 swiper-1 card">
-        <div class="container">
-            
-            <div class="mb-48 card__swiper">
+                         <!--card-->
+<div class="mb-60 swiper-1 card card--main" data-animation="fadeUp">
+        
+        <div class="mb-48 card__swiper" data-animation="fadeUp">
     <div class="swiper">
         <div class="swiper-wrapper">
             
@@ -176,29 +176,27 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
-            <div class="card__info">
-                <div class="card__params">
-                    <div class="card__param">
-                        <span class="h4">до 30 гостей</span>
-                        <span>Вместимость</span>
-                    </div>
-                    <div class="card__param">
-                        <span class="h4">2 чел.</span>
-                        <span>Кол-во гостей</span>
-                    </div>
+        <div class="card__info">
+            <div class="card__params">
+                <div class="card__param">
+                    <span class="h4">до 30 гостей</span>
+                    <span>Вместимость</span>
                 </div>
-                <div class="card__actions">
-                    
-                    <button class="btn main-btn mod-open-btn" data-modal="feedback-modal"><span>оставить заявку</span></button>
+                <div class="card__param">
+                    <span class="h4">2 чел.</span>
+                    <span>Кол-во гостей</span>
                 </div>
+            </div>
+            <div class="card__actions">
+                
+                <button class="btn main-btn mod-open-btn" data-modal="feedback-modal"><span>оставить заявку</span></button>
             </div>
         </div>
         </div>
-                    <div class="container">
-                        <div class="mb-60 page-content">
+                        <div class="mb-60 page-content" data-animation="fadeUp">
                             <p>Подходит для переговоров и камерных встреч в спокойной обстановке</p>
                         </div>
-                        <div class="mb-60 grid-2col room-features">
+                        <div class="mb-60 grid-2col room-features" data-animation="fadeUp">
                             <ul>
                                 <li><img src="img/svg/feature-1.svg" alt>Кровать (Двуспальная / Две односпальные)</li>
                                 <li><img src="img/svg/feature-2.svg" alt>Вайфай</li>
@@ -218,7 +216,7 @@
                                 <li><img src="img/svg/feature-15.svg" alt>Журнальный столик</li></ul>
 
                         </div>
-                        <div class="mb-60 swiper-4 room__swiper">
+                        <div class="mb-60 swiper-4 room__swiper" data-animation="fadeUp">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -254,15 +252,47 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-60 collage">
-                            <div class="media-cover"><picture><source srcset="img/content/collage-1.webp" type="image/webp"><img src="img/content/collage-1.jpg" alt></picture></div>
-                            <div class="media-cover"><picture><source srcset="img/content/collage-2.webp" type="image/webp"><img src="img/content/collage-2.jpg" alt></picture></div>
-                            <div class="media-cover"><picture><source srcset="img/content/collage-3.webp" type="image/webp"><img src="img/content/collage-3.jpg" alt></picture></div>
+                        <div class="mb-60 collage collage--3col" data-animation="fadeUp">
+                            <div class="media-cover">
+                                <picture>
+    <source srcset="img/content/collage-1.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-1.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-1-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-1-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-1-mob.webp" type="image/webp">
+    <source srcset="img/content/collage-1-mob.jpg">
+    <img src="img/content/collage-1.jpg" alt>
+</picture>
+                            </div>
+                            <div class="media-cover">
+                                <picture>
+    <source srcset="img/content/collage-2.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-2.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-2-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-2-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-2-mob.webp" type="image/webp">
+    <source srcset="img/content/collage-2-mob.jpg">
+    <img src="img/content/collage-2.jpg" alt>
+</picture>
+                            </div>
+                            <div class="media-cover">
+                                <picture>
+    <source srcset="img/content/collage-3.webp" type="image/webp" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-3.jpg" media="(min-width: 1023.98px)">
+    <source srcset="img/content/collage-3-tablet.webp" type="image/webp" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-3-tablet.jpg" media="(min-width: 575.98px)">
+    <source srcset="img/content/collage-3-mob.webp" type="image/webp">
+    <source srcset="img/content/collage-3-mob.jpg">
+    <img src="img/content/collage-3.jpg" alt>
+</picture>
+                            </div>
                         </div>
-                        <div class="mb-24 page-content">
-                            <p>Описание дополнительно</p>
+                        <div class="mb-60" data-animation="fadeUp">
+                            <div class="mb-24 page-content">
+                                <p>Описание дополнительно</p>
+                            </div>
+                            <a href="#" target="_blank" class="btn main-btn"><span>меню кофе-брейков</span></a>
                         </div>
-                        <a href="#" target="_blank" class="btn main-btn"><span>меню кофе-брейков</span></a>
                     </div>
                 </section>
             </main>
@@ -295,23 +325,23 @@
         </div>
         <nav class="footer__menu">
             <ul>
-                <li><a href="#">Номера</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Отель</a></li>
+                <li><a href="#">номера</a></li>
+                <li><a href="#">услуги</a></li>
+                <li><a href="#">отель</a></li>
             </ul>
             <ul>
-                <li><a href="#">Ресторан</a></li>
-                <li><a href="#">Конференц-залы</a></li>
+                <li><a href="#">ресторан</a></li>
+                <li><a href="#">конференц-залы</a></li>
                 <li><a href="#">СПА</a></li>
             </ul>
             <ul>
-                <li><a href="#">Золотой стандарт</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">золотой стандарт</a></li>
+                <li><a href="#">вакансии</a></li>
+                <li><a href="#">спецпредложения</a></li>
             </ul>
             <ul>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#">новости</a></li>
+                <li><a href="#">контакты</a></li>
             </ul>
         </nav>
         <div class="footer__links">
@@ -421,8 +451,8 @@
         <div class="custom-scroll">
             <div class="media-cover modal__img">
                 <picture>
-                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/mod-result.jpg" media="(min-width: 1023.98px)">
+                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 575.98px)">
+                    <source srcset="img/mod-result.jpg" media="(min-width: 575.98px)">
                     <source srcset="img/mod-result-mob.webp" type="image/webp">
                     <source srcset="img/mod-result-mob.jpg">
                     <img src="img/mod-result.jpg" alt>

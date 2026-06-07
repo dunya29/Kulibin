@@ -25,7 +25,7 @@
 <header class="header fixed-block ">
     <div class="header__inner">
         <div class="container">
-            <div class="header__item">Нижний Новгород</div>
+            <div class="mob-hidden header__item header__address">Нижний Новгород</div>
             <div class="header__item header__phone"><a href="tel:+78312020888"><svg><use xlink:href="img/svg/sprite.svg#phone"></use></svg>+7 (831) 20-20-888</a></div>
             <div class="header__logo">
                 <a href="#"><img src="img/svg/header-logo.svg" alt></a>
@@ -40,16 +40,18 @@
                 </div>
 
             </div>
-            <a href="#" class="btn main-btn header__booking"><span>забронировать номер</span></a>
+            <a href="#" class="btn main-btn desktop-only"><span>забронировать номер</span></a>
             <div role="button" class="icon-menu" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="icon-menu__items">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
     <div class="header__mob">
-        <div class="custom-scroll container">
+        <div class="container">
             <div class="header__mob-inner">
                 <nav class="header__menu">
                     <ul>
@@ -63,11 +65,11 @@
                         <li><a href="#" class="link">контакты</a></li>
                     </ul>
                 </nav>
-                <div class=" desktop-hidden header__address">
+                <p class="desktop-hidden mb-32 header__address">
                     г. Нижний Новгород,<br>
                     ул. Максима Горького, д. 121, 603006
-                </div>
-                <div class=" desktop-hidden header__contacts">
+                </p>
+                <div class="desktop-hidden mb-32 header__contacts">
                     <div class="mb-32 header__contacts-item">
                         <p class="h5">
                             <a href="tel:+78312020888">+7 (831) 20-20-888</a>
@@ -85,9 +87,9 @@
                 <div class="page-top">
                     <div class="container">
                         <!--breadcrumbs-->
-<div class="breadcrumbs">
-    <ul>
-        <li><a href="#">Главная</a></li>
+<div class="scrollable breadcrumbs">
+    <ul class="scrollable__items">
+        <li><a href="#" class="link">Главная</a></li>
         
         <li>Новости</li>
     </ul>
@@ -104,20 +106,14 @@
                         </div>
                         <div class="news__items">
                             <!--item-news-->
-<article class="item-news">
+<article class="item-news" data-animation="fadeUp" style="--item-i: 1;">
     <a href="#" class="hover-slider">
         <div class="hover-slider__images">
             <div class="hover-slider__img">
                 <picture><source srcset="img/content/news-1.webp" type="image/webp"><img src="img/content/news-1.jpg" alt></picture>
             </div>
             <div class="hover-slider__img">
-                <picture>
-                    <source srcset="img/content/news-2.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-2.jpg" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-2-tablet.webp" type="image/webp">
-                    <source srcset="img/content/news-2-tablet.jpg">
-                    <img src="img/content/news-2.jpg" alt>
-                </picture>
+                <picture><source srcset="img/content/news-2.webp" type="image/webp"><img src="img/content/news-2.jpg" alt></picture>
             </div>
         </div>
         <div class="hover-slider__hovers"></div>
@@ -125,24 +121,19 @@
     </a>
     <div class="item-news__content">
         <h3 class="h4"><a href="#" class="link">Обновление пространства лобби</a></h3>
-        <p class=".item-news__desc">Новая организация зоны отдыха и приёма гостей с акцентом на комфорт и приватность</p>
+        <p>Новая организация зоны отдыха и приёма гостей с акцентом на комфорт и приватность</p>
     </div>
+    <a href="#" class="btn light-btn"><span>читать</span></a>
 </article>
                             <!--item-news-->
-<article class="item-news">
+<article class="item-news" data-animation="fadeUp" style="--item-i: 2;">
     <a href="#" class="hover-slider">
         <div class="hover-slider__images">
             <div class="hover-slider__img">
                 <picture><source srcset="img/content/news-2.webp" type="image/webp"><img src="img/content/news-2.jpg" alt></picture>
             </div>
             <div class="hover-slider__img">
-                <picture>
-                    <source srcset="img/content/news-1.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-1.jpg" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-1-tablet.webp" type="image/webp">
-                    <source srcset="img/content/news-1-tablet.jpg">
-                    <img src="img/content/news-1.jpg" alt>
-                </picture>
+                <picture><source srcset="img/content/news-1.webp" type="image/webp"><img src="img/content/news-1.jpg" alt></picture>
             </div>
         </div>
         <div class="hover-slider__hovers"></div>
@@ -150,35 +141,41 @@
     </a>
     <div class="item-news__content">
         <h3 class="h4"><a href="#" class="link">Конференц-залы в&nbsp;новом формате</a></h3>
-        <p class=".item-news__desc">Обновлённые решения для деловых встреч, презентаций и мероприятий</p>
+        <p>Обновлённые решения для деловых встреч, презентаций и мероприятий</p>
     </div>
+    <a href="#" class="btn light-btn"><span>читать</span></a>
 </article>
                             <!--item-news-->
-<article class="item-news">
+<article class="item-news" data-animation="fadeUp" style="--item-i: 3;">
     <a href="#" class="hover-slider">
         <div class="hover-slider__images">
             <div class="hover-slider__img">
                 <picture><source srcset="img/content/news-3.webp" type="image/webp"><img src="img/content/news-3.jpg" alt></picture>
             </div>
             <div class="hover-slider__img">
-                <picture>
-                    <source srcset="img/content/news-1.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-1.jpg" media="(min-width: 1023.98px)">
-                    <source srcset="img/content/news-1-tablet.webp" type="image/webp">
-                    <source srcset="img/content/news-1-tablet.jpg">
-                    <img src="img/content/news-4.jpg" alt>
-                </picture>
+                <picture><source srcset="img/content/news-2.webp" type="image/webp"><img src="img/content/news-2.jpg" alt></picture>
             </div>
         </div>
         <div class="hover-slider__hovers"></div>
         <div class="hover-slider__controls"></div>
     </a>
     <div class="item-news__content">
-        <h3 class="h4"><a href="#" class="link">Свадебные мероприятия в отеле</a></h3>
-        <p class=".item-news__desc">Пространство для камерных церемоний и значимых событий с вниманием к деталям</p>
+        <h3 class="h4"><a href="#" class="link">Свадебные мероприятия в&nbsp;отеле</a></h3>
+        <p>Пространство для камерных церемоний и значимых событий с вниманием к деталям</p>
     </div>
+    <a href="#" class="btn light-btn"><span>читать</span></a>
 </article>
                         </div>
+                        
+<!--pagination-->
+<nav class="pagination">
+    <a class="pagination__link" href="#">1</a>
+    <a class="pagination__link current" href="#">2</a>
+    <a class="pagination__link" href="#">3</a>
+    <a class="pagination__link" href="#">4</a>
+    <span class="pagination__item">...</span>
+    <a class="pagination__link" href="#">11</a>
+</nav>
                     </div>
                 </section>
             </main>
@@ -211,23 +208,23 @@
         </div>
         <nav class="footer__menu">
             <ul>
-                <li><a href="#">Номера</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Отель</a></li>
+                <li><a href="#">номера</a></li>
+                <li><a href="#">услуги</a></li>
+                <li><a href="#">отель</a></li>
             </ul>
             <ul>
-                <li><a href="#">Ресторан</a></li>
-                <li><a href="#">Конференц-залы</a></li>
+                <li><a href="#">ресторан</a></li>
+                <li><a href="#">конференц-залы</a></li>
                 <li><a href="#">СПА</a></li>
             </ul>
             <ul>
-                <li><a href="#">Золотой стандарт</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">золотой стандарт</a></li>
+                <li><a href="#">вакансии</a></li>
+                <li><a href="#">спецпредложения</a></li>
             </ul>
             <ul>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#">новости</a></li>
+                <li><a href="#">контакты</a></li>
             </ul>
         </nav>
         <div class="footer__links">
@@ -337,8 +334,8 @@
         <div class="custom-scroll">
             <div class="media-cover modal__img">
                 <picture>
-                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 1023.98px)">
-                    <source srcset="img/mod-result.jpg" media="(min-width: 1023.98px)">
+                    <source srcset="img/mod-result.webp" type="image/webp" media="(min-width: 575.98px)">
+                    <source srcset="img/mod-result.jpg" media="(min-width: 575.98px)">
                     <source srcset="img/mod-result-mob.webp" type="image/webp">
                     <source srcset="img/mod-result-mob.jpg">
                     <img src="img/mod-result.jpg" alt>
